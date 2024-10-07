@@ -1,9 +1,9 @@
 
 <h2 id="project-description">Project Description</h2>
-This a next.js app router project with server actions that read and append to file. These aerver actions are used by react client component
+This a next.js app router project with server actions that read and append to a server file. These aerver actions are used by react client component
 
 <h2 id="motivation">Motivation</h2>
-How to create a server action and use it in a react client component
+Server actions runs on the server but can be invoked by the client, this eliminate e.g. using api endpoints. The purpose in this project is to show how to create a server actions and use them in a react client component
 
 <h2 id="installation">Installation</h2>
 Install the packages
