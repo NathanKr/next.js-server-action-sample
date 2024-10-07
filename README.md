@@ -148,6 +148,8 @@ The main page ui is as follows
 <img src='./figs/demo.png'/>
 
 <h2 id="points-of-interest">Points of Interest</h2>
+The following are points worth mentioning
+
 <ul>
   <li>
     <h3>Server-Side Execution:</h3> Check the Network tab in Chrome DevTools to see that the file content is a response from the server.
