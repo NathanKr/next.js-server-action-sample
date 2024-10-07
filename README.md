@@ -1,19 +1,21 @@
+<h1>Project Name</h1>
+Next.js App with Server Actions
 
 <h2 id="project-description">Project Description</h2>
-This a next.js app router project with server actions that read and append to a server file. These aerver actions are used by react client component
+This project is a Next.js app that uses the new Next.js 14 server actions feature. Server actions allow the app to perform server-side operations (e.g., reading and appending to a file) that can be invoked directly from React client components (and server components), eliminating the need for separate API routes. This README will guide you through setting up, using, and understanding the project structure.
 
 <h2 id="motivation">Motivation</h2>
-Server actions runs on the server but can be invoked by the client, this eliminate e.g. using api endpoints. The purpose in this project is to show how to create a server actions and use them in a react client component
+Server actions run on the server but can be invoked by the client. This eliminates the need for creating additional API endpoints and simplifies data handling between server and client. The goal of this project is to demonstrate how to implement server actions and use them in React client components.
 
 <h2 id="installation">Installation</h2>
-Install the packages
+To install the required packages, run:
 
 ```bash
 pnpm i
 ```
 
 <h2 id="usage">Usage</h2>
-Invoke the development server
+To start the development server, use the following command:
 
 ```bash
 npm run dev
@@ -22,9 +24,9 @@ npm run dev
 <h2>Code snippets</h2>
 
 <h3>Home page</h3>
+The main page simply renders a ClientComponent which utilizes the server actions:
 
 ```ts
-
 export default function Home() {
   return (
     <>
@@ -35,7 +37,7 @@ export default function Home() {
 ```
 
 <h3>Server action file - actions.ts</h3>
-Server action file must has the directive "use server" as the first line
+The server action file must include the "use server" directive at the top:
 
 ```ts
 "use server";
@@ -93,8 +95,8 @@ export async function appendToFile(
 }
 ```
 
-<h3>Use server action in react client component - ClientComponent. part 1</h3>
-client component must have the directive 'use client' in the first line of the file 
+<h3>Use server action in react client component - ClientComponent. Logic part</h3>
+The client component must include the "use client" directive at the top:
 
 ```ts
 "use client";
@@ -114,7 +116,7 @@ const ClientComponent: FC = () => {
     setNewContent(""); // Clear the input after appending
   };
 ```
-<h3>Use server action in react client component - ClientComponent. part 2</h3>
+<h3>Use server action in react client component - ClientComponent. UI part</h3>
 
 ```ts
 return (
@@ -141,19 +143,26 @@ The main page ui is as follows
 
 <img src='./figs/demo.png'/>
 
-
-
 <h2 id="points-of-interest">Points of Interest</h2>
 <ul>
-    <li>check in network tab and see that the file content is a response from the server <img src='./figs/network-server-action.png'/>
-    </li>
-    <li>check sources tab in chrome dev tools and see that the code of readFileFromServer does not appears in the browser code
-    <img src='./figs/server-action-code-not-in-browser.png'/>
-    </li>
-</ul>
+  <li>
+    <strong>Server-Side Execution:</strong> Check the Network tab in Chrome DevTools to see that the file content is a response from the server.
+    <br />
+    <img src='./figs/network-server-action.png' alt='Network Tab' />
+  </li>
+  <li>
+    <strong>Code is not Bundled in the Browser:</strong> Check the Sources tab in Chrome DevTools and notice that the code of <code>readFileFromServer</code> does not appear in the browser. This indicates that server actions remain on the server side.
+    <br />
+    <img src='./figs/server-action-code-not-in-browser.png' alt='Code Visibility' />
+  </li>
+<li>
+    <strong>Server actions are implemented by Next.js but are a React feature:</strong> Server actions are part of React’s capabilities, and Next.js simply provides the framework for utilizing them effectively.
+  </li></ul>
+
 
 <h2 id="references">References</h2>
 <ul>
     <li>check this <a href='https://www.youtube.com/playlist?list=PLT6u32ApxFVBskjKDMxQZL2kHIj3eeue0'>React Server Component playlist</a> for info on react server componet and react client components</li>
+    <li><a href='https://react.dev/reference/rsc/server-actions'>server action in react</a></li>
 </ul>
 
