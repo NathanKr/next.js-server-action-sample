@@ -1,6 +1,6 @@
-/* /app/components/ClientComponent.module.css */
 .container {
     padding: 16px;
+    max-width: 50%;
     font-family: Arial, sans-serif;
   }
   

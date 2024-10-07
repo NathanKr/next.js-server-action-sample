@@ -24,14 +24,13 @@ const ClientComponent: FC = () => {
   return (
     <div className={styles.container}>
       <button className={styles.button} onClick={handleViewFile}>
-        View File
+        View File Content
       </button>
       <pre className={styles.fileContent}>{fileContent}</pre>
       <button className={styles.button} onClick={handleAppend}>
         Append to File
       </button>
-      <textarea
-        className={styles.textarea}
+      <textarea className={styles.textarea}
         value={newContent}
         onChange={(e) => setNewContent(e.target.value)}
         placeholder="Enter new content to append"
