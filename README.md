@@ -25,6 +25,7 @@ npm run dev
 ```
 
 <h2>Code snippets</h2>
+The following are important code snippets
 
 <h3>Home page</h3>
 The main page simply renders a ClientComponent which utilizes the server actions:
