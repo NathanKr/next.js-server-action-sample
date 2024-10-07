@@ -1,0 +1,50 @@
+/* /app/components/ClientComponent.module.css */
+.container {
+    padding: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+    background-color: #f9f9f9; /* Match background color */
+    color: black; /* Match text color */
+  }
+  
+  .fileContent {
+    white-space: pre-wrap;
+    margin: 16px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9; /* Match background color */
+    color: black; /* Match text color */
+  }
+  
+  .message {
+    margin: 16px 0;
+    color: #28a745;
+    font-weight: bold;
+  }
+  

@@ -24,7 +24,7 @@ export async function appendToFile(
 ): Promise<string> {
   const filePath = path.resolve(".", DATA_DIR, fileName);
   try {
-    await fs.appendFile(filePath, content, "utf-8");
+    await fs.appendFile(filePath, `${content}\n`, 'utf-8'); 
     return "Content appended successfully";
   } catch (error) {
     if (error instanceof Error) {

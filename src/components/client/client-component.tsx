@@ -1,9 +1,9 @@
-// /app/components/ClientComponent.tsx
 "use client";
 
 import { readFileFromServer, appendToFile } from "@/actions/actions";
 import { EXAMPLE_FILE_NAME } from "@/logic/constants";
 import { FC, useState } from "react";
+import styles from "@/styles/client-component.module.css";
 
 const ClientComponent: FC = () => {
   const [fileContent, setFileContent] = useState<string>("");
@@ -22,18 +22,21 @@ const ClientComponent: FC = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleAppend}>Append to File</button>
-      <br />
+    <div className={styles.container}>
+      <button className={styles.button} onClick={handleViewFile}>
+        View File
+      </button>
+      <pre className={styles.fileContent}>{fileContent}</pre>
+      <button className={styles.button} onClick={handleAppend}>
+        Append to File
+      </button>
       <textarea
+        className={styles.textarea}
         value={newContent}
         onChange={(e) => setNewContent(e.target.value)}
         placeholder="Enter new content to append"
       />
-      <p>{message}</p>
-      <br /><br />
-      <button onClick={handleViewFile}>View File</button>
-      <pre>{fileContent}</pre>
+      <p className={styles.message}>{message}</p>
     </div>
   );
 };
