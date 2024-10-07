@@ -7,7 +7,7 @@ Next.js App with Server Actions
 This project is a Next.js app that utilizes the new <strong>Next.js 14 server actions</strong> feature. Server actions enable server-side operations (e.g., reading and appending to a file) that can be directly invoked from React components, eliminating the need for separate API routes. 
 
 <h2>Project Motivation</h2>
-The motivation behind this project is to explore how to implement server actions in a Next.js application, simplify the interaction between server and client. This README will guide you through setting up, using, and understanding the project structure.
+The motivation behind this project is to explore how to implement server actions in a Next.js application to simplify the interaction between server and client. This README will guide you through setting up, using, and understanding the project structure.
 
 
 <h2 id="installation">Installation</h2>
