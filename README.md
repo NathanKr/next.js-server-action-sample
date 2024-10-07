@@ -150,20 +150,13 @@ The main page ui is as follows
 <h2 id="points-of-interest">Points of Interest</h2>
 The following are points worth mentioning
 
-<ul>
-  <li>
-    <h3>Server-Side Execution:</h3> Check the Network tab in Chrome DevTools to see that the file content is a response from the server.
-    <br />
-    <img src='./figs/network-server-action.png' alt='Network Tab' />
-  </li>
-  <li>
-    <h3>Code is not Bundled in the Browser:</h3> Check the Sources tab in Chrome DevTools and notice that the code of <code>readFileFromServer</code> does not appear in the browser. This indicates that server actions remain on the server side.
-    <br />
-    <img src='./figs/server-action-code-not-in-browser.png' alt='Code Visibility' />
-  </li>
-<li>
-    <h3>Server actions are implemented by Next.js but are a React feature:</h3> Server actions are part of React’s capabilities, and Next.js simply provides the framework for utilizing them effectively.
-  </li></ul>
+  <h3>Server-Side Execution:</h3> Check the Network tab in Chrome DevTools to see that the file content is a response from the server.
+  <br />
+  <img src='./figs/network-server-action.png' alt='Network Tab' />
+  <h3>Code is not Bundled in the Browser:</h3> Check the Sources tab in Chrome DevTools and notice that the code of <code>readFileFromServer</code> does not appear in the browser. This indicates that server actions remain on the server side.
+  <br />
+  <img src='./figs/server-action-code-not-in-browser.png' alt='Code Visibility' />
+  <h3>Server actions are implemented by Next.js but are a React feature:</h3> Server actions are part of React’s capabilities, and Next.js simply provides the framework for utilizing them effectively.
 
 
 <h2 id="references">References</h2>
